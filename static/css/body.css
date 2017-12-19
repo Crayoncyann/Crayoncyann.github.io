@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #E8E8E8;
+}
+
+main {
+    position: relative;
+    margin-right: 320px;
+}
+
+.inner {
+    position: relative;
+    background: white;
+    margin: 30px;
+}
+
+header {
+    position: relative;
+    height: 90px;
+    width: 100%;
+    background: #E8E8E8;
+}
+
+section {
+    position: relative;
+    width: 85%;
+    margin: 50px auto;
+}
+
+.foot {
+    position: relative;
+    width: 85%;
+    margin: 0 auto 0;
+    height: 100px;
+    line-height: 2;
+    color: #404040;
+    bottom: 0;
+}
+
+aside {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    animation-name: asideshow;
+    animation-duration: 0.6s;
+}
+
+.list-div {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    right: 320px;
+}

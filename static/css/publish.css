@@ -1,0 +1,96 @@
+.pub-title {
+    font-size: 26px;
+    margin: 0 0 30px;
+}
+.pub-info-div {
+    margin: 0 0 20px;
+}
+.pub-info-div span, .pub-info-div input, textarea {
+    font-family: Microsoft YaHei;
+    font-size: 15px;
+    color: #333333;
+    background: inherit;
+}
+.pub-info-div input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin: 0 0 0 15px;
+    text-align: center;
+    width: 30%;
+}
+textarea {
+    display: block;
+    position: relative;
+    outline: none;
+    width: 100%;
+    margin: 30px 0;
+    overflow-y: scroll;
+    resize: none;
+
+}
+.cate-div {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+.pub-cate {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+.pub-cate-p{
+    position: relative;
+    font-family: Microsoft YaHei;
+    font-size: 12px;
+    color: #404040;
+    background: #CCCCCC;
+    padding: 4px 12px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.5s;
+}
+.cate-p-active {
+    color: white;
+    background: #404040;
+}
+.pub-cate input {
+    width: 50px;
+    margin: 0 6px 0 0;
+}
+.cate-blog img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    transition: 0.5s;
+}
+#creat-cate {
+    margin: 0;
+    width: 100px;
+}
+.pub-cue {
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 1px #404040;
+}
+.pub-cue img {
+    position: relative;
+    top: 3px;
+}
+.pub-submit {
+    width: 160px;
+    height: 40px;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    color: white;
+    line-height: 0.6;
+    background: #404040;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #404040;
+    transition: background 0.5s, color 0.3s;
+}
+.text-input-div {
+    position: relative;
+    width: 100%;
+}

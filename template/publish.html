@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>blog demo</title>
+        <link rel="stylesheet" href="/css/body.css" charset="utf-8" id="body-css">
+        <link rel="stylesheet" href="/css/animations.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/header.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/section.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/footer.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/aside.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/publish.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/hover.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/list.css" charset="utf-8">
+        <!-- lodash -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+        <!-- markdown -->
+        <script src="https://cdn.bootcss.com/remarkable/1.7.1/remarkable.min.js"></script>
+    </head>
+    <body>
+        <!-- blogInfo -->
+        <main>
+            <div class="inner">
+                <!-- 包含 logo nav -->
+                <header>
+                    <div class="blog-header">
+                        <div class="blog-logo">
+                            <div class="loader-outter"></div>
+                            <div class="loader-inner"></div>
+                            <p class="logo-text">BLOG</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="/"  class="nav-a">
+                                        <img id="home" src="/icon/blog/homepage.png"/>
+                                        首页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/blog/category"  class="nav-a">
+                                        <img id="cate" src="/icon/blog/category.png"/>
+                                        分类
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/blog/add"  class="nav-a">
+                                        <img id="person" src="/icon/blog/publishRed.png"/>
+                                        发布
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"  class="nav-a">
+                                        <img id="person" src="/icon/blog/personRed.png"/>
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <!-- 包含 blog 正文 -->
+                <section>
+                    <article>
+                        <div class="pub-info">
+                            <span class="pub-title">发布一个新东西</span>
+                            <div class="pub-info-div">
+                                <span>主题</span>
+                                <input id="blog-title">
+                            </div>
+                            <div class="pub-info-div">
+                                <span>分类</span>
+                                <div class="cate-div"></div>
+                                <span class="text-low">|&nbsp;</span>
+                                <span class="cate-blog">
+                                    <img src="/icon/blog/add.png">
+                                    <input class="dis-none" id="creat-cate">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pub-cue">
+                            <span>- Editor is Markdown </span>
+                            <img src="/icon/blog/show.png" alt="look 一 look">
+                            <span> U can click button -</span>
+                        </div>
+                        <textarea id="text-input-src" rows="20" required></textarea>
+                        <div class="text-input-show dis-none"></div>
+                        <div class="pub-submit">
+                            <p>Submit</p>
+                        </div>
+                        <div class="art-line"></div>
+                    </article>
+                </section>
+                <!-- 包含 developDate update 开发者 user flow -->
+                <footer class="foot">
+                    <div class="foot-right">
+                        <img src="/icon/blog/trademark.png"/>
+                        <span>2017</span>
+                        <img src="/icon/blog/author.png"/>
+                        <span>Blog Demo By 蜡笔酱</span>
+                        <img src="/icon/blog/watchers.png"/>
+                        <span class="foot-watchers">1</span>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <!-- 包含 userInfo -->
+        <aside>
+            <div class="aside-inner">
+                <div class="aside-logo">
+                    <img src="/img/userLogo.jpg" id="aside-logo-img"/>
+                </div>
+                <div class="aside-info">
+                    <div class="center">
+                        <div class="info-item" id="info-arct"></div>
+                        <span>|</span>
+                        <div class="info-item" id="info-view">
+                            <a>
+                                6
+                                <br>
+                                相册
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-about">
+                    <div class="center">
+                        <a class="about-info" id="about-git">
+                            <img id="git" src="/icon/blog/git.png"/>
+                            GitHub
+                        </a>
+                        <a class="about-info" id="about-mail">
+                            <img id="mail" src="/icon/blog/mail.png"/>
+                            Mail
+                        </a>
+                    </div>
+                    <a class="about-info" id="about-me">
+                        <img id="introduce" src="/icon/blog/introduce.png"/>
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <script src="/js/tools.js"></script>
+        <script src="/js/publish.js"></script>
+        <script src="/js/aside.js"></script>
+        <!-- canvas 动画 -->
+        <script src="/js/canvas.js"></script>
+    </body>
+</html>
