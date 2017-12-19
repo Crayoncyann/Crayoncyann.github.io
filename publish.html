@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>blog demo</title>
+        <link rel="stylesheet" href="./css/body1.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/animations.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/header.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/section.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/footer.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/aside.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/publish.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/hover.css" charset="utf-8">
+        <!-- markdown -->
+        <script src="https://cdn.bootcss.com/remarkable/1.7.1/remarkable.min.js"></script>
+        <!-- lodash -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    </head>
+    <body>
+        <!-- blogInfo -->
+        <main>
+            <div class="inner">
+                <!-- 包含 logo nav -->
+                <header>
+                    <div class="blog-header">
+                        <div class="blog-logo">
+                            <div class="loader-outter"></div>
+                            <div class="loader-inner"></div>
+                            <p class="logo-text">BLOG</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li class="nav-li">
+                                    <a href="index.html"  class="nav-a">
+                                        <img id="home" src="./icon/homepage.png"/>
+                                        首页
+                                    </a>
+                                </li>
+                                <li class="nav-li">
+                                    <a href="#"  class="nav-a">
+                                        <img id="cate" src="./icon/category.png"/>
+                                        分类
+                                    </a>
+                                </li>
+                                <li class="nav-li">
+                                    <a href="#"  class="nav-a">
+                                        <img id="publish" src="./icon/publish.png"/>
+                                        发布
+                                    </a>
+                                </li>
+                                <li class="nav-li">
+                                    <a href="#"  class="nav-a nav-login">
+                                        <img id="person" src="./icon/personRed.png"/>
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <!-- 包含 blog 正文 -->
+                <section>
+                    <article>
+                        <div class="pub-info">
+                            <span class="pub-title">发布一个新东西</span>
+                            <div class="pub-info-div">
+                                <span>主题</span>
+                                <input id="blog-title">
+                            </div>
+                            <div class="pub-info-div">
+                                <span>分类</span>
+                                <div class="cate-div">
+                                    <span class="pub-cate" data-index="0">
+                                        <img src="./icon/blog/cate.png" alt="" />
+                                        <p id="ceshi">
+                                            测试 1
+                                        </p>
+                                    </span>
+                                    <span class="pub-cate" data-index="0">
+                                        <img src="./icon/blog/cate.png" alt="" />
+                                        <p>
+                                            测试 2
+                                        </p>
+                                    </span>
+                                </div>
+                                <span class="text-low">|&nbsp;</span>
+                                <span class="cate-blog">
+                                    <img src="./icon/add.png" alt="">
+                                    <input class="dis-none" id="creat-cate">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pub-cue">
+                            <span>- Editor is Markdown </span>
+                            <img src="./icon/show.png" alt="look 一 look">
+                            <span> U can click button -</span>
+                        </div>
+                        <textarea id="text-input-src" rows="11"></textarea>
+                        <div class="text-input-show dis-none"></div>
+                        <div class="pub-submit">
+                            <p>Submit</p>
+                        </div>
+                        <div class="art-line"></div>
+                    </article>
+                </section>
+                <!-- 包含 developDate update 开发者 user flow -->
+                <footer class="foot">
+                    <div class="foot-right">
+                        <img src="./icon/trademark.png"/>
+                        <span>2017</span>
+                        <img src="./icon/author.png"/>
+                        <span>Blog Demo By 蜡笔酱</span>
+                        <img src="./icon/watchers.png"/>
+                        <span class="foot-watchers">1</span>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <!-- 包含 userInfo -->
+        <aside>
+            <div class="aside-inner">
+                <div class="aside-logo">
+                    <img src="./img/userLogo.jpg"/>
+                </div>
+                <div class="aside-info">
+                    <div class="center">
+                        <div class="info-item" id="info-arct">
+                            <a href="#">2</a>
+                            <br>
+                            <a href="#">日志</a>
+                        </div>
+                        <span>|</span>
+                        <div class="info-item" id="info-view">
+                            <a href="#">6</a>
+                            <br>
+                            <a href="#">相册</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-about">
+                    <div class="center">
+                        <a href="#" class="about-info">
+                            <img id="git" src="./icon/git.png"/>
+                            GitHub
+                        </a>
+                        <a href="#" class="about-info">
+                            <img id="mail" src="./icon/mail.png"/>
+                            Mail
+                        </a>
+                    </div>
+                    <a href="#" class="about-info">
+                        <img id="introduce" src="./icon/introduce.png"/>
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <script src="./js/tools.js"></script>
+        <script src="./js/pub.js"></script>
+    </body>
+</html>

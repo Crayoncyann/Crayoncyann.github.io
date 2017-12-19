@@ -1,0 +1,77 @@
+.blog-header {
+    position: relative;
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+}
+.blog-header nav{
+    position: relative;
+    float: right;
+    top: 35px;
+}
+.blog-header nav ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.blog-header nav ul li{
+    float: left;
+}
+.nav-a {
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: default;
+    border-radius: 3px;
+    color: #404040;
+    margin: 0 12px;
+    padding: 3px 10px;
+    background: white;
+}
+.login-div {
+    position: absolute;
+    right: 12px;
+    top: 62px;
+    box-shadow: 0 0 5px 2px #ff6347;
+    background: white;
+    border-radius: 5px;
+}
+.login-div span {
+    font-size: 13px;
+    color: #404040;
+    margin: 0 0 0 10px;
+}
+.login-div input {
+    font-size: 13px;
+    color: #404040;
+    border: none;
+    margin: 10px;
+    width: 103px;
+    background: #E8E8E8;
+}
+.dis-none {
+    display: none;
+}
+.nav-a img {
+    display: inline-block;
+    position: relative;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px 0 0;
+    bottom: -2px;
+}
+.blog-logo {
+    position: absolute;
+    left: 20px;
+    width: 87px;
+    height: 87px;
+}
+.logo-text {
+    position: absolute;
+    color: #505050;
+    font-size: 30px;
+    left: 6px;
+    top: -2px;
+    text-shadow: 0 0 5px #A80000;
+}

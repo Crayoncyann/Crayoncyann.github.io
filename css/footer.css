@@ -1,0 +1,16 @@
+.foot-right {
+    position: relative;
+    float: right;
+    bottom: -40px;
+}
+.foot img {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    margin: 0 0 0 15px;
+    top: 2px;
+}
+.foot span {
+    font-size: 13px;
+    margin: 0 5px 0 0;
+}

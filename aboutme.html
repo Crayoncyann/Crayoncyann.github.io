@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>blog demo blogshow</title>
+        <link rel="stylesheet" href="./css/body2.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/animations.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/header.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/section.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/footer.css" charset="utf-8">
+        <link rel="stylesheet" href="./css/aside.css" charset="utf-8">
+        <!-- <link rel="stylesheet" href="./css/hover.css" charset="utf-8"> -->
+        <link rel="stylesheet" href="./css/list.css" charset="utf-8">
+        </style>
+    </head>
+    <body>
+        <!-- canvas 动画 -->
+        <script src="./js/canvas.js"></script>
+        <!-- blogInfo -->
+        <main>
+            <div class="inner">
+                <!-- 包含 logo nav -->
+                <header>
+                    <div class="blog-header">
+                        <div class="blog-logo">
+                            <div class="loader-outter"></div>
+                            <div class="loader-inner"></div>
+                            <p class="logo-text">BLOG</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#"  class="nav-a">
+                                        <img id="home" src="./icon/homepage.png"/>
+                                        首页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"  class="nav-a">
+                                        <img id="cate" src="./icon/category.png"/>
+                                        分类
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#"  class="nav-a">
+                                        <img id="archive" src="./icon/archive.png"/>
+                                        标签
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a href="#"  class="nav-a dis-none">
+                                        <img id="person" src="./icon/publish.png"/>
+                                        发布
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"  class="nav-a">
+                                        <img id="person" src="./icon/person.png"/>
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="login-div dis-none">
+                            <span>用户</span>
+                            <input>
+                            <br>
+                            <span>密码</span>
+                            <input>
+                        </div>
+                    </div>
+                </header>
+                <!-- 包含 blog 正文 -->
+                <section>
+                    <article>
+                        <header class="art-head">
+                            <a class="art-title">这是一个 Demo</a>
+                            <br>
+                            <img src="./icon/creat.png"/>
+                            <span class="text-low">发布于</span>
+                            <span class="text-low">2017-12-2</span>
+                            <span class="text-low">&nbsp;|&nbsp;</span>
+                            <img src="./icon/folder.png"/>
+                            <span class="text-low">分类于</span>
+                            <a class="art-cate" href="#">测试</a>
+                        </header>
+                        <div class="post-body">
+                            <p>
+                                在比较简单的应用场景下我们常用HashMap来缓存一些数据,比如建立Socket连接时需要保存Socket关联的用户,这个信息无法直接添加到Socket对象的属性中,那就可以通过Map来保存这些元数据信息。但这样子会产生一个问题，对象元数据的生命周期需要与套接字(Socket)的生命周期挂钩，除非你准确地知道应用程序什么时候不再需要这个套接字，并记住从Map中删除相应的映射，否则，Socket和User对象将会永远留在Map中，远远超过了套接字的生命周期，而且HashMap会对key和value持有一个强引用，这会阻止Socket和User对象被垃圾收集，到最后时间长了可能导致JVM OutOfMemory。
+                            </p>
+                        </div>
+                        <footer class="art-foot">
+                            <img src="./icon/read.png"/>
+                            <a class="art-read" href="#">阅读全文</a>
+                            <!-- <span class="text-low">&nbsp;|&nbsp;</span>
+                            <img src="./icon/comment.png"/>
+                            <a class="art-comm" href="#">评论</a> -->
+                        </footer>
+                        <div class="art-line"></div>
+                    </article>
+                    <!-- test complete delete -->
+                    <article>
+                        <header class="art-head">
+                            <a class="art-title">这是一个 Demo</a>
+                            <br>
+                            <img src="./icon/creat.png"/>
+                            <span class="text-low">发布于</span>
+                            <span class="text-low">2017-12-2</span>
+                            <span class="text-low">&nbsp;|&nbsp;</span>
+                            <img src="./icon/folder.png"/>
+                            <span class="text-low">分类于</span>
+                            <a class="art-cate" href="#">测试</a>
+                        </header>
+                        <div class="post-body">
+                            <p>
+                                在比较简单的应用场景下我们常用HashMap来缓存一些数据,比如建立Socket连接时需要保存Socket关联的用户,这个信息无法直接添加到Socket对象的属性中,那就可以通过Map来保存这些元数据信息。但这样子会产生一个问题，对象元数据的生命周期需要与套接字(Socket)的生命周期挂钩，除非你准确地知道应用程序什么时候不再需要这个套接字，并记住从Map中删除相应的映射，否则，Socket和User对象将会永远留在Map中，远远超过了套接字的生命周期，而且HashMap会对key和value持有一个强引用，这会阻止Socket和User对象被垃圾收集，到最后时间长了可能导致JVM OutOfMemory。
+                            </p>
+                        </div>
+                        <footer class="art-foot">
+                            <img src="./icon/read.png"/>
+                            <a class="art-read" href="#">阅读全文</a>
+                            <!-- <span class="text-low">&nbsp;|&nbsp;</span>
+                            <img src="./icon/comment.png"/>
+                            <a class="art-comm" href="#">评论</a> -->
+                        </footer>
+                        <div class="art-line"></div>
+                    </article>
+                </section>
+                <!-- 包含 developDate update 开发者 user flow -->
+                <footer class="foot">
+                    <div class="foot-right">
+                        <img src="./icon/trademark.png"/>
+                        <span>2017</span>
+                        <img src="./icon/author.png"/>
+                        <span>Blog Demo By 蜡笔酱</span>
+                        <img src="./icon/watchers.png"/>
+                        <span class="foot-watchers">1</span>
+                    </div>
+                </footer>
+            </div>
+        </main>
+        <!-- 日志展示栏 -->
+        <div class="list-div">
+            <div class="am-div">
+                <p class="am-cont">
+                    这是一个介绍
+                    <br>
+                    啦啦啦
+                    <br>
+                    <br>
+                    这是一个介绍，测试行数显示
+                    <br>
+                    啦啦啦
+                    <br>
+                    <br>
+                    这是一个介绍，测试高度显示
+                    <br>
+                    啦啦啦
+                </p>
+            </div>
+        </div>
+        <!-- 包含 userInfo -->
+        <aside>
+            <div class="aside-inner">
+                <div class="aside-logo">
+                    <img src="./img/userLogo.jpg"/>
+                </div>
+                <div class="aside-info">
+                    <div class="center">
+                        <div class="info-item" id="info-arct">
+                            <a href="#">2</a>
+                            <br>
+                            <a href="#">日志</a>
+                        </div>
+                        <span>|</span>
+                        <div class="info-item" id="info-view">
+                            <a href="#">6</a>
+                            <br>
+                            <a href="#">相册</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-about">
+                    <div class="center">
+                        <a href="#" class="about-info">
+                            <img id="git" src="./icon/git.png"/>
+                            GitHub
+                        </a>
+                        <a href="#" class="about-info">
+                            <img id="mail" src="./icon/mail.png"/>
+                            Mail
+                        </a>
+                    </div>
+                    <a href="#" class="about-info">
+                        <img id="introduce" src="./icon/introduce.png"/>
+                        About Me
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </body>
+</html>

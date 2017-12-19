@@ -1,0 +1,81 @@
+.art-foot {
+    position: relative;
+    margin: 80px 0 0;
+    width: 100%;
+}
+.art-center {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+.art-nav {
+    position: relative;
+    font-size: 16px;
+}
+.art-nav img {
+    position: relative;
+    margin: 0 2px;
+}
+.art-prv {
+    position: relative;
+    left: 0;
+}
+.art-nxt {
+    float: right;
+    position: relative;
+}
+.art-comm {
+    position: relative;
+    margin: 40px 0 0 0;
+}
+.comm-head {
+    position: relative;
+    width: 100%;
+}
+.comm-head-cont {
+    position: relative;
+    font-size: 16px;
+    height: 30px;
+    width: 7%;
+    border: 1px solid #A0A0A0;
+    border-bottom: none;
+    margin: 0;
+    padding: 3px 10px;
+    text-align: center;
+    left: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.comm-head-line {
+    position: relative;
+    left: -2px;
+    margin: 0;
+    width: 90%;
+    border-bottom: 1px solid #A0A0A0;
+    top: 12px;
+}
+.comm-foot {
+    position: relative;
+    margin: 20px 0 0 0;
+}
+.comm-foot ol {
+    font-size: 14px;
+    color: #202020;
+}
+.comm-foot ol li{
+    position: relative;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.comm-foot ol li span {
+    font-size: 14px;
+    color: #202020;
+    margin: 0 0 0 20px;
+}
+.comm-foot ol li p {
+    margin: 10px 0 10px 20px;
+}
+.comm-foot-line {
+    width: 97.5%;
+    border-bottom: 1px dashed #A0A0A0;
+}
