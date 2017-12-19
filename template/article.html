@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>blog demo</title>
-        <link rel="stylesheet" href="/css/body.css" charset="utf-8" id="body-css">
+        <link rel="stylesheet" href="/css/body.css" charset="utf-8">
         <link rel="stylesheet" href="/css/animations.css" charset="utf-8">
         <link rel="stylesheet" href="/css/header.css" charset="utf-8">
         <link rel="stylesheet" href="/css/section.css" charset="utf-8">
@@ -26,7 +26,7 @@
                         <div class="blog-logo">
                             <div class="loader-outter"></div>
                             <div class="loader-inner"></div>
-                            <p class="logo-text">BLOG</p>
+                            <p class="logo-text">写生簿</p>
                         </div>
                         <nav>
                             <ul>
@@ -43,23 +43,48 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/blog/add"  class="nav-a">
-                                        <img id="person" src="/icon/blog/publish.png"/>
+                                    <a href="/blog/publish" class="nav-a dis-none" id="publish">
+                                        <img src="/icon/blog/publish.png"/>
                                         发布
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#"  class="nav-a">
-                                        <img id="person" src="/icon/blog/personRed.png"/>
-                                        Login
+                                    <a class="nav-a" id="person">
+                                        <img src="/icon/blog/person.png"/>
+                                        Author
                                     </a>
                                 </li>
                             </ul>
                         </nav>
+                        <div class="login-div dis-none">
+                            <span>用户</span>
+                            <input id="login-name">
+                            <br>
+                            <span>密码</span>
+                            <input id="login-pw">
+                            <button id="login-submit" class="login-submit">submit</button>
+                        </div>
                     </div>
                 </header>
                 <!-- 包含 blog 正文 -->
                 <section>
+                    <!-- 来必力City版安装代码 -->
+                    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjUxNS85MDc2">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                           var j, e = d.getElementsByTagName(s)[0]
+                           if (typeof LivereTower === 'function') {
+                               return
+                           }
+                           j = d.createElement(s)
+                           j.src = 'https://cdn-city.livere.com/js/embed.dist.js'
+                           j.async = true
+                           e.parentNode.insertBefore(j, e)
+                       })(document, 'script')
+                    </script>
+                    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+                    </div>
+                    <!-- City版安装代码已完成 -->
                 </section>
                 <!-- 包含 developDate update 开发者 user flow -->
                 <footer class="foot">
@@ -106,6 +131,7 @@
         <script src="/js/tools.js"></script>
         <script src="/js/article.js"></script>
         <script src="/js/aside.js"></script>
+        <script src="/js/person.js"></script>
         <!-- canvas 动画 -->
         <script src="/js/canvas.js"></script>
     </body>

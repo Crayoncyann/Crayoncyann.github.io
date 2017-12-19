@@ -64,28 +64,10 @@
     border-bottom: 1px solid #A0A0A0;
     top: 12px;
 }
-.comm-foot {
-    position: relative;
-    margin: 20px 0 0 0;
-}
-.comm-foot ol {
-    font-size: 14px;
-    color: #202020;
-}
-.comm-foot ol li{
-    position: relative;
-    width: 100%;
-    margin: 20px 0 0 0;
-}
-.comm-foot ol li span {
-    font-size: 14px;
-    color: #202020;
-    margin: 0 0 0 20px;
-}
-.comm-foot ol li p {
-    margin: 10px 0 10px 20px;
-}
 .comm-foot-line {
     width: 97.5%;
     border-bottom: 1px dashed #A0A0A0;
+}
+.article-bottom {
+    margin-bottom: 0;
 }

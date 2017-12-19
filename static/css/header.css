@@ -70,8 +70,28 @@
 .logo-text {
     position: absolute;
     color: #505050;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
     left: 6px;
-    top: -2px;
-    text-shadow: 0 0 5px #A80000;
+    top: 4px;
+    font-family: 'Lobster Two', 'Monda', "PingFang SC";
+}
+
+.login-submit {
+    display: block;
+    position: relative;
+    margin: 5px auto;
+    padding: 3px 10px;
+    background: white;
+    border: 1px solid #404040;
+    border-radius: 5%;
+    outline: none;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.login-submit:hover {
+    background: #404040;
+    color: white;
 }

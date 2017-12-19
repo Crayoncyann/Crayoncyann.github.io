@@ -1,24 +1,24 @@
 // 渲染文章、评论
-var templateArticle = (blog) => {
-    var id = blog.id
-    var title = blog.title
+const templateArticle = (blog) => {
+    let id = blog.id
+    let title = blog.title
     let category = blog.category
     let cate = ''
     for (var i = 0; i < category.length; i++) {
         let c = category[i]
         cate += '#' + c + ' '
     }
-    var content = blog.content
-    var d = new Date(blog.created_time * 1000)
-    var time = d.toLocaleString()
+    let content = blog.content
+    let d = new Date(blog.created_time * 1000)
+    let time = d.toLocaleString()
     timeArray = time.split('/')
     timeArray[2] = timeArray[2].replace('上午', 'am ')
     timeArray[2] = timeArray[2].replace('下午', 'pm ')
     timeArray[2] = timeArray[2].slice(0, -3)
     timeArray[2] = timeArray[2].slice(0, 2) + timeArray[2].slice(5) + timeArray[2].slice(2, 5)
     time = timeArray[0] + '-' + timeArray[1] + '-' + timeArray[2]
-    var t = `
-        <article>
+    let t = `
+        <article class="article-bottom">
             <header class="art-head">
                 <div class="center">
                     <div class="art-center">
@@ -41,33 +41,10 @@ var templateArticle = (blog) => {
                 <div class="art-nav">
                     <div class="art-nav-center"></div>
                 </div>
-                <div class="new-comment">
-                    <input class="comment-blog-id" type=hidden value="${id}">
-                    <input class="comment-author" value="">
-                    <input class="comment-content" value="">
-                    <button class="comment-add">添加评论</button>
-                </div>
                 <div class="art-comm">
                     <div class="comm-head">
                         <span class="comm-head-cont">评论</span>
                         <span class="comm-head-line"></span>
-                    </div>
-                    <div class="comm-foot">
-                        <!-- 来必力City版安装代码 -->
-                        <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjUxNS85MDc2">
-                            <script type="text/javascript">
-                            (function(d, s) {
-                                var j, e = d.getElementsByTagName(s)[0];
-                                if (typeof LivereTower === 'function') { return; }
-                                j = d.createElement(s);
-                                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                                j.async = true;
-                                e.parentNode.insertBefore(j, e);
-                            })(document, 'script');
-                            </script>
-                            <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                        </div>
-                        <!-- City版安装代码已完成 -->
                     </div>
                 </div>
             </footer>
@@ -76,40 +53,13 @@ var templateArticle = (blog) => {
     return t
 }
 
-var insertArticle = (blog) => {
+const insertArticle = (blog) => {
     var section = e('section')
-    var t = templateArticle(blog)
-    appendHTML(section, t)
+    let t = templateArticle(blog)
+    section.insertAdjacentHTML('afterbegin', t)
 }
 
-var templateComment = () => {
-    var t = `
-        <!-- 来必力City版安装代码 -->
-        <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjUxNS85MDc2">
-            <script type="text/javascript">
-            (function(d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-            </script>
-            <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-        </div>
-        <!-- City版安装代码已完成 -->
-    `
-    return t
-}
-
-var insertComment = () => {
-    var div = e('.comm-foot')
-    var t = templateComment()
-    appendHTML(div, t)
-}
-
-var blogArticle = (id) => {
+const blogArticle = (id) => {
     var request = {
         method: 'GET',
         url: '/api/blog/' + id,
@@ -118,14 +68,13 @@ var blogArticle = (id) => {
             var b = JSON.parse(response)
             // 渲染页面
             insertArticle(b)
-            // insertComment()
             insertFoot()
         }
     }
     ajax(request)
 }
 
-var templatePrvNxt = (id) => {
+const templatePrvNxt = (id) => {
     var prv = Number(id) - 1
     var nxt = Number(id) + 1
     var t = `
@@ -141,7 +90,7 @@ var templatePrvNxt = (id) => {
     return t
 }
 
-var insertPrvNxt = (blogs) => {
+const insertPrvNxt = (blogs) => {
     var nav = e('.art-nav-center')
     var id = e('body').dataset.id
     var t = templatePrvNxt(id)
@@ -156,7 +105,7 @@ var insertPrvNxt = (blogs) => {
     }
 }
 
-var blogPrvNxt = function() {
+const blogPrvNxt = function() {
     var request = {
         method: 'GET',
         url: '/api/blog/all',
@@ -169,49 +118,6 @@ var blogPrvNxt = function() {
     }
     ajax(request)
 }
-
-// var commentNew = function(form, callback) {
-//     var data = JSON.stringify(form)
-//     var request = {
-//         method: 'POST',
-//         url: '/api/comment/add',
-//         contentType: 'application/json',
-//         data: data,
-//         callback: function(response) {
-//             log('响应', response)
-//             var c = JSON.parse(response)
-//             callback(c)
-//         }
-//     }
-//     ajax(request)
-// }
-
-// var actionCommentAdd = (event) => {
-//     var self = event.target
-//     var form = self.closest('.new-comment')
-//     var blogId = form.querySelector('.comment-blog-id').value
-//     var author = form.querySelector('.comment-author').value
-//     var content = form.querySelector('.comment-content').value
-//     var d = {
-//         blog_id: blogId,
-//         author: author,
-//         content: content,
-//     }
-//     commentNew(d, (comment) => {
-//         log('新评论', comment)
-//         var t = templateComment(comment)
-//         var div = e('.comm-list')
-//         div.insertAdjacentHTML('afterbegin', t)
-//     })
-// }
-
-// document.body.addEventListener('click', function(event) {
-//     log('click comment new')
-//     var self = event.target
-//     if (self.classList.contains('comment-add')) {
-//         actionCommentAdd(event)
-//     }
-// })
 
 var __main = () => {
     // 获取blog/id

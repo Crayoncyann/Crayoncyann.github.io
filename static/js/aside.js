@@ -158,7 +158,6 @@ const bindEventAboutme = () => {
     let button = e('#about-me')
     let css = e('#body-css')
     bindEvent(button, 'click', () => {
-        log('点击到了 aboutme')
         if (e('.list-div') == null) {
             insertAboutme()
         } else {

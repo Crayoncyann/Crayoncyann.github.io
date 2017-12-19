@@ -33,7 +33,7 @@ const category = {
 }
 
 const publish = {
-    path: '/blog/add',
+    path: '/blog/publish',
     method: 'get',
     func: (request, response) => {
         let path = 'publish.html'
