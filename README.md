@@ -37,7 +37,7 @@
 
 - update
 
-<iframe height=400 width=800 src="Crayoncyann.github.io/网页音乐播放器插件.gif">
+![](Crayoncyann.github.io/网页音乐播放器插件.gif)
 
 1. 添加页面底部的音乐播放器，参照[网易云音乐](http://music.163.com/)，添加了一些音乐
 2. 添加一些 alert
