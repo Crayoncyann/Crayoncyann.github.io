@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: #E8E8E8;
+    background: #F0F0F0;
 }
 
 main {
@@ -20,7 +20,7 @@ header {
     position: relative;
     height: 90px;
     width: 100%;
-    background: #E8E8E8;
+    background: #F0F0F0;
 }
 
 section {

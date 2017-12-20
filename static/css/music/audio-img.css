@@ -1,0 +1,21 @@
+.audio-img {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 5%;
+}
+.audio-img img {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    outline: none;
+    border-radius: 20%;
+    transition: box-shadow 0.5s;
+}
+.audio-img img:hover {
+    box-shadow: 0 0 6px white;
+}

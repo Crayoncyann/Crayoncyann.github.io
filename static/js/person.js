@@ -21,7 +21,6 @@ const loginInput = () => {
         pwInput = pw.value
     })
     bindEvent(submit, 'click', () => {
-        log('click', nameInput, pwInput)
         if (nameInput == 'A' && pwInput == '1') {
             div.classList.toggle('dis-none')
             publish.classList.toggle('dis-none')

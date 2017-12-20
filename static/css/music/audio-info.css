@@ -1,0 +1,15 @@
+.progress-time {
+    position: relative;
+    float: right;
+    right: 20px;
+}
+.progress-time span {
+    font-size: 1px;
+}
+.audio-div span{
+    color: rgba(192, 192, 192, 0.7);
+    transition: all 0.6s;
+}
+.audio-div span:hover {
+    color: white;
+}

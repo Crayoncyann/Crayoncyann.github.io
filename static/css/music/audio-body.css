@@ -1,0 +1,74 @@
+.audio-div {
+	position: fixed;
+	bottom: 0;
+	height: 65px;
+	width: 100%;
+	user-select: none;
+	cursor: default;
+}
+.audio-div button {
+	border: none;
+	outline: none;
+	transition: all 0.4s;
+}
+.audio-div button:hover {
+	transform: translateY(-2px);
+}
+.audio-state {
+	position: absolute;
+	height: 20px;
+	width: 60px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: none;
+	right: 120px;
+	bottom: 0;
+	background: url(/img/music/bg.png);
+	opacity: 0.8;
+	transition: all 0.4s;
+}
+@keyframes shake {
+	from, to {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(-5px);
+    }
+}
+.audio-state:hover {
+	animation-name: shake;
+	animation-duration: 0.8s;
+}
+.audio-state a {
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	top: 50%;
+	left: 50%;
+	border: none;
+	outline: none;
+	cursor: default;
+	transform: translate(-50%, -50%);
+	background: url(/icon/music/unlock.png);
+	transition: background 0.5s;
+}
+.audio-component {
+	position: absolute;
+	bottom: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0.9;
+	border: 1px solid black;
+	background: url(/img/music/bg.png);
+	transition: opacity 0.4s;
+}
+.audio-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1000px;
+	height: 100%;
+}

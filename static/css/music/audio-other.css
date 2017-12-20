@@ -1,0 +1,50 @@
+.audio-other {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 15%;
+    padding: 0 0 0 10px;
+}
+.other-style {
+    width: 35px;
+    height: 35px;
+    margin: 7px 0;
+    transition: 0.5s;
+}
+.audio-list-div {
+    position: absolute;
+    width: 210px;
+    bottom: 45px;
+    right: 40px;
+    padding: 0;
+    background: url(/img/music/bg.png);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+}
+.audio-list-li {
+    position: relative;
+    left: -20px;
+    border-bottom: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 0;
+    font-size: 3px;
+    color: rgba(192, 192, 192, 0.7);
+    text-align: center;
+    opacity: 1;
+    transition: 0.4s;
+}
+.li-active {
+    background: rgba(131, 175, 155, 0.7);
+    color: white;
+}
+.opacity-active {
+    opacity: 0;
+}
+.display-active {
+    display: none;
+}

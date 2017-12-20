@@ -17,9 +17,9 @@
         return {
             l: script_len,                                           //长度，用于生成id用
             z: get_attribute(script, "zIndex", -1),                   //z-index
-            o: get_attribute(script, "opacity", 0.8),                //opacity
-            c: get_attribute(script, "color", "136,136,136"),        //color
-            n: get_attribute(script, "count", 130)                   //count
+            o: get_attribute(script, "opacity", 0.9),                //opacity
+            c: get_attribute(script, "color", "94,186,219"),        //color
+            n: get_attribute(script, "count", 90)                   //count
         };
     }
     //设置canvas的高宽

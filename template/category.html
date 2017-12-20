@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>blog demo</title>
+        <!-- title logo -->
+        <link rel="shortcut icon" href="/img/userLogo.jpg">
+        <!-- CSS 博客 -->
         <link rel="stylesheet" href="/css/body.css" charset="utf-8">
         <link rel="stylesheet" href="/css/animations.css" charset="utf-8">
         <link rel="stylesheet" href="/css/header.css" charset="utf-8">
@@ -12,6 +15,13 @@
         <link rel="stylesheet" href="/css/category.css" charset="utf-8">
         <link rel="stylesheet" href="/css/hover.css" charset="utf-8">
         <link rel="stylesheet" href="/css/list.css" charset="utf-8">
+        <!-- CSS audio -->
+        <link rel="stylesheet" href="/css/music/audio-body.css">
+        <link rel="stylesheet" href="/css/music/audio-control.css">
+        <link rel="stylesheet" href="/css/music/audio-progress.css">
+        <link rel="stylesheet" href="/css/music/audio-img.css">
+        <link rel="stylesheet" href="/css/music/audio-info.css">
+        <link rel="stylesheet" href="/css/music/audio-other.css">
         <!-- lodash -->
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
         </style>
@@ -96,11 +106,11 @@
                 </div>
                 <div class="aside-about">
                     <div class="center">
-                        <a class="about-info" id="about-git">
+                        <a class="about-info" id="about-git" href="https://github.com/Crayoncyann/Crayoncyann.github.io.git" target="_blank">
                             <img id="git" src="/icon/blog/git.png"/>
                             GitHub
                         </a>
-                        <a class="about-info" id="about-mail">
+                        <a class="about-info" id="about-mail" onclick="alert('lvgj_sunshine@163.com 欢迎fork，有更好的想法请联络我')">
                             <img id="mail" src="/icon/blog/mail.png"/>
                             Mail
                         </a>
@@ -112,11 +122,85 @@
                 </div>
             </div>
         </aside>
+        <!-- 音乐播放器 -->
+        <div class="audio-div">
+            <div class="audio-state">
+                <a id="audio-lock"></a>
+            </div>
+            <div class="audio-component opacity-active display-active">
+                <!-- 音乐标签 -->
+                <audio src="/music/IU - 夜信.mp3" data-index="0"></audio>
+                <div class="audio-center">
+                    <!-- 控制 -->
+                    <div class="audio-controls">
+                        <button class="controls-style" id="controls-prv" title="上一首" style="background:url(/icon/music/prv.png)" data-index="0"></button>
+                        <button id="controls-play" title="播放/暂停" style="background:url(/icon/music/play.png)" data-index="0"></button>
+                        <button class="controls-style" id="controls-nxt" title="下一首" style="background:url(/icon/music/nxt.png)" data-index="0"></button>
+                    </div>
+                    <!-- 缩略图 -->
+                    <div class="audio-img">
+                        <img src="/img/music/夜信.jpg"/>
+                    </div>
+                    <!-- 详细信息 -->
+                    <div class="audio-progress">
+                        <!-- 歌曲信息 -->
+                        <div class="audio-info" data-index="0">
+                            <span id="info-music"></span>
+                            <span>&nbsp;-&nbsp;</span>
+                            <span id="info-singer"></span>
+                        </div>
+                        <!-- 进度条控制 -->
+                        <div class="play-progress-div">
+                            <div class="play-progress">
+                                <span id="play-bar"></span>
+                                <div id="play-control"></div>
+                            </div>
+                        </div>
+                        <!-- 时间显示 -->
+                        <div class="progress-time">
+                            <span id="progress-ct">--:--</span>
+                            <span>/</span>
+                            <span id="progress-dt">--:--</span>
+                        </div>
+                    </div>
+                    <!-- 播放器功能 -->
+                    <div class="audio-other">
+                        <button class="other-style" title="音量" id="audio-volume" style="background:url(/icon/music/vol.png)" data-index="0"></button>
+                        <button class="other-style" title="循环" id="audio-loop" style="background:url(/icon/music/loop.png)" data-index="0"></button>
+                        <button class="other-style" title="列表" id="audio-list" style="background:url(/icon/music/list.png)" data-index="0"></button>
+                        <!-- 播放列表 -->
+                        <div class="audio-list-div opacity-active display-active">
+                            <ul style="list-style-type: none">
+                            </ul>
+                        </div>
+                        <!-- 音量控制 -->
+                        <div class="audio-volume-div opacity-active display-active">
+                            <div class="volume-progress">
+                                <span id="volume-bar"></span>
+                                <div id="volume-control"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="/js/tools.js"></script>
+        <!-- canvas 动画 -->
+        <script src="/js/canvas.js"></script>
+        <!-- JS 博客 -->
+        <script src="/js/assist.js"></script>
         <script src="/js/category.js"></script>
         <script src="/js/aside.js"></script>
         <script src="/js/person.js"></script>
-        <!-- canvas 动画 -->
-        <script src="/js/canvas.js"></script>
+        <!-- JS 播放器 -->
+        <script src="/js/music/animations.js"></script>
+        <script src="/js/music/state.js"></script>
+        <script src="/js/music/buffer.js"></script>
+        <script src="/js/music/controls.js"></script>
+        <script src="/js/music/progress.js"></script>
+        <script src="/js/music/choice.js"></script>
+        <script src="/js/music/volume.js"></script>
+        <script src="/js/music/loop.js"></script>
+        <script src="/js/music/music.js"></script>
     </body>
 </html>
