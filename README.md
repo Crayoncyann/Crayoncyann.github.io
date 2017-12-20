@@ -2,10 +2,10 @@
 
 - 基于 Node.js Express JS 搭建的 Blog
 
-1. 构造前端，参照[EZLippi-浮生志](https://www.ezlippi.com)、[Litten的博客](http://litten.me/) 布局静态 HTML，使用 *HTML5* 和 *CSS3* 新特性
-2. 使用 *原生JS* 绑定基本事件、封装好 *AJAX*，使用 *Lodash* 便于快速开发
-3. 构造后端，建立 blog API，comment API，模拟存储格式为 JSON
-4. 渲染页面，文章通过 *动态路由* 渲染，评论 id 与博客 id 连接
+1. 构造前端，参照[EZLippi-浮生志](https://www.ezlippi.com)、[Litten的博客](http://litten.me/) 布局静态 HTML，使用 **HTML5** 和 **CSS3** 新特性
+2. 使用 **原生JS** 绑定基本事件、封装好 **AJAX**，使用 **Lodash** 便于快速开发
+3. 构造后端，建立 **blog API** **comment API**，模拟存储格式为 **JSON**
+4. 渲染页面，文章通过 **动态路由** 渲染，评论 id 与博客 id 连接
 5. Debug
     1. 修改路由获取方式
     2. 修改渲染层级关系
@@ -35,6 +35,6 @@
 
 - update
 
-1. 添加页面底部的音乐播放器，参照[网易云音乐](http://music.163.com/)
+1. 添加页面底部的音乐播放器，参照[网易云音乐](http://music.163.com/)，添加了一些音乐
 2. 添加一些 alert
 3. 优化了页面动画效果
