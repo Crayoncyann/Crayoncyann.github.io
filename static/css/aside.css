@@ -68,3 +68,17 @@
     top: 1px;
     margin: 0 3px 0 0;
 }
+
+.goto-top {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 350px auto 0;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px white;
+}
+
+.goto-top:hover {
+    animation-name: shake;
+    animation-duration: 0.8s;
+}

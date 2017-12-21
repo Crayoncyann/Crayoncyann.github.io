@@ -1,3 +1,4 @@
+// 渲染日志总数
 const templateBlogsNum = (blogs) => {
     let num = blogs.length
     let t = `
@@ -31,6 +32,7 @@ const aside = function() {
     ajax(request)
 }
 
+// 渲染日志 List
 const templateListDiv = () => {
     let t = `
         <div class="list-div">
@@ -121,6 +123,7 @@ const bindEventBlogs = () => {
     })
 }
 
+// 渲染作者介绍
 const templateAboutme = () => {
     let t = `
         <div class="list-div">
@@ -167,10 +170,29 @@ const bindEventAboutme = () => {
     })
 }
 
+// 顶部回滚
+const gotoTop = () => {
+    $('.goto-top').hide()
+    $(function () {
+        $(window).scroll(() => {
+            if ($(window).scrollTop() >= 300){
+                $('.goto-top').fadeIn(300)
+            } else {
+                $('.goto-top').fadeOut(300)
+            }
+        })
+        $('.goto-top').click(() => {
+            $('body, html').animate({scrollTop:0}, 300)
+            return false
+        })
+    })
+}
+
 var __main = () => {
     aside()
     bindEventBlogs()
     bindEventAboutme()
+    gotoTop()
 }
 
 __main()
