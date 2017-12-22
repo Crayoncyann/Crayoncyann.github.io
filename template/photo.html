@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="/css/section.css" charset="utf-8">
         <link rel="stylesheet" href="/css/footer.css" charset="utf-8">
         <link rel="stylesheet" href="/css/aside.css" charset="utf-8">
-        <link rel="stylesheet" href="/css/article.css" charset="utf-8">
+        <link rel="stylesheet" href="/css/photo.css" charset="utf-8">
         <link rel="stylesheet" href="/css/hover.css" charset="utf-8">
         <link rel="stylesheet" href="/css/list.css" charset="utf-8">
         <!-- CSS audio -->
@@ -26,8 +26,9 @@
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
         <!-- jQuery -->
         <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+        </style>
     </head>
-    <body data-id="{{blog_id}}">
+    <body>
         <!-- blogInfo -->
         <main>
             <div class="inner">
@@ -49,7 +50,7 @@
                                 </li>
                                 <li>
                                     <a href="/blog/category"  class="nav-a">
-                                        <img id="cate" src="/icon/blog/category.png"/>
+                                        <img id="cate" src="/icon/blog/categoryRed.png"/>
                                         分类
                                     </a>
                                 </li>
@@ -79,23 +80,6 @@
                 </header>
                 <!-- 包含 blog 正文 -->
                 <section>
-                    <!-- 来必力City版安装代码 -->
-                    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjUxNS85MDc2">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                           var j, e = d.getElementsByTagName(s)[0]
-                           if (typeof LivereTower === 'function') {
-                               return
-                           }
-                           j = d.createElement(s)
-                           j.src = 'https://cdn-city.livere.com/js/embed.dist.js'
-                           j.async = true
-                           e.parentNode.insertBefore(j, e)
-                       })(document, 'script')
-                    </script>
-                    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-                    </div>
-                    <!-- City版安装代码已完成 -->
                 </section>
                 <!-- 包含 developDate update 开发者 user flow -->
                 <footer class="foot">
@@ -110,7 +94,8 @@
                 </div>
                 <div class="aside-info">
                     <div class="center">
-                        <div class="info-item" id="info-arct"></div>
+                        <div class="info-item" id="info-arct">
+                        </div>
                         <span>|</span>
                         <div class="info-item" id="info-view">
                         </div>
@@ -204,7 +189,7 @@
         <script src="/js/canvas.js"></script>
         <!-- JS 博客 -->
         <script src="/js/assist.js"></script>
-        <script src="/js/article.js"></script>
+        <script src="/js/photo.js"></script>
         <script src="/js/aside.js"></script>
         <script src="/js/person.js"></script>
         <!-- JS 播放器 -->

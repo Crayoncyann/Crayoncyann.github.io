@@ -1,0 +1,40 @@
+.photo-head {
+    position: relative;
+    font-size: 26px;
+}
+
+.photo-head-style {
+    color: #999999;
+    font-size: 26px;
+}
+
+.photo-list-div {
+    position: relative;
+    margin: 40px 0;
+}
+
+.photo {
+    position: relative;
+    display: inline-block;
+    margin: 40px 10px 40px 0;
+    width: 180px;
+}
+
+.photo-img {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+}
+
+.photo-line {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    border-bottom: 1px dashed #999999;
+    transition: all 0.5s;
+}
+
+.photo-line:hover {
+    width: 70%;
+}

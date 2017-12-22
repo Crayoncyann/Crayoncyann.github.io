@@ -60,11 +60,21 @@ const article = {
     }
 }
 
+const photo = {
+    path: '/photo',
+    method: 'get',
+    func: (request, response) => {
+        let path = 'photo.html'
+        sendHtml(path, response)
+    }
+}
+
 const routes = [
     index,
     category,
     publish,
     article,
+    photo,
 ]
 
 module.exports.routes = routes

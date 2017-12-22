@@ -8,7 +8,6 @@ app.use(bodyParser.json())
 // 配置静态文件目录
 app.use(express.static('static'))
 
-
 const registerRoutes = (app, routes) => {
     for (var i = 0; i < routes.length; i++) {
         var route = routes[i]
@@ -28,6 +27,10 @@ registerRoutes(app, routeBlog.routes)
 // 导入 route/comment 的所有路由数据
 const routeComment = require('./route/comment')
 registerRoutes(app, routeComment.routes)
+
+// 导入 route/photo 的所有路由数据
+const routePhoto = require('./route/photo')
+registerRoutes(app, routePhoto.routes)
 
 // listen 函数的第一个参数是我们要监听的端口
 // 这个端口是要浏览器输入的

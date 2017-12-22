@@ -17,7 +17,25 @@ const insertBlogsNum = function(blogs) {
     appendHTML(div, html)
 }
 
-const aside = function() {
+const templatePhotosNum = (photos) => {
+    let num = photos.length
+    let t = `
+        <a href="/photo">
+            ${num}
+            <br>
+            相册
+        </a>
+    `
+    return t
+}
+
+const insertPhotosNum = function(photos) {
+    let html = templatePhotosNum(photos)
+    let div = e('#info-view')
+    appendHTML(div, html)
+}
+
+const asideBlog = function() {
     var request = {
         method: 'GET',
         url: '/api/blog/all',
@@ -27,6 +45,21 @@ const aside = function() {
             var blogs = JSON.parse(response)
             window.blogs = blogs
             insertBlogsNum(blogs)
+        }
+    }
+    ajax(request)
+}
+
+const asidePhoto = () => {
+    var request = {
+        method: 'GET',
+        url: '/api/photo/all',
+        contentType: 'application/json',
+        callback: function(response) {
+            // 不考虑错误情况（断网、服务器返回错误等等）
+            // console.log('响应', response)
+            var photos = JSON.parse(response)
+            insertPhotosNum(photos)
         }
     }
     ajax(request)
@@ -189,7 +222,8 @@ const gotoTop = () => {
 }
 
 var __main = () => {
-    aside()
+    asideBlog()
+    asidePhoto()
     bindEventBlogs()
     bindEventAboutme()
     gotoTop()
