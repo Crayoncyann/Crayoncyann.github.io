@@ -8,9 +8,15 @@
     font-size: 26px;
 }
 
-.photo-list-div {
+.photos-div {
     position: relative;
+    color: #404040;
     margin: 40px 0;
+}
+
+.photo-time-p {
+    font-size: 18px;
+    line-height: 2;
 }
 
 .photo {
@@ -31,10 +37,10 @@
     left: 50%;
     transform: translateX(-50%);
     width: 20%;
-    border-bottom: 1px dashed #999999;
-    transition: all 0.5s;
+    border-bottom: 2px dashed #999999;
+    transition: all 0.6s;
 }
 
-.photo-line:hover {
+.photo-line-hover {
     width: 70%;
 }

@@ -2,15 +2,18 @@
     font-size: 26px;
     margin: 0 0 30px;
 }
+
 .pub-info-div {
     margin: 0 0 20px;
 }
+
 .pub-info-div span, .pub-info-div input, textarea {
     font-family: Microsoft YaHei;
     font-size: 15px;
     color: #333333;
     background: inherit;
 }
+
 .pub-info-div input {
     outline: none;
     border: none;
@@ -19,24 +22,27 @@
     text-align: center;
     width: 30%;
 }
+
 textarea {
     display: block;
     position: relative;
     outline: none;
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     margin: 30px 0;
-    overflow-y: scroll;
-    resize: none;
-
 }
+
 .cate-div {
     display: inline;
     margin: 0 0 0 15px;
 }
+
 .pub-cate {
     position: relative;
     margin: 0 10px 0 0;
 }
+
 .pub-cate-p{
     position: relative;
     font-family: Microsoft YaHei;
@@ -48,14 +54,17 @@ textarea {
     border-bottom-right-radius: 10px;
     transition: all 0.5s;
 }
+
 .cate-p-active {
     color: white;
     background: #404040;
 }
+
 .pub-cate input {
     width: 50px;
     margin: 0 6px 0 0;
 }
+
 .cate-blog img {
     position: relative;
     width: 20px;
@@ -63,19 +72,32 @@ textarea {
     top: 5px;
     transition: 0.5s;
 }
+
 #creat-cate {
     margin: 0;
     width: 100px;
 }
+
 .pub-cue {
     position: relative;
     text-align: center;
     text-shadow: 0 0 1px #404040;
+    transition: all 0.5s;
 }
+
+.pub-cue-red {
+    color: #ff6347;
+    text-shadow: 0 0 3px #ff6347;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
 .pub-cue img {
     position: relative;
     top: 3px;
 }
+
 .pub-submit {
     width: 160px;
     height: 40px;
@@ -90,6 +112,7 @@ textarea {
     border: 2px solid #404040;
     transition: background 0.5s, color 0.3s;
 }
+
 .text-input-div {
     position: relative;
     width: 100%;

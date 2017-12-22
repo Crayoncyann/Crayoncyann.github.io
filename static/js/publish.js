@@ -24,6 +24,7 @@ const markdownShow = () => {
     let div = e('.pub-cue')
     bindEvent(div, 'click', () => {
         e('.text-input-show').classList.toggle('dis-none')
+        div.classList.toggle('pub-cue-red')
     })
 }
 

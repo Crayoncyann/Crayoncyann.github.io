@@ -4,19 +4,23 @@
     width: 85%;
     margin: 0 auto;
 }
+
 .blog-header nav{
     position: relative;
     float: right;
     top: 35px;
 }
+
 .blog-header nav ul{
     list-style:none;
     margin: 0;
     padding: 0;
 }
+
 .blog-header nav ul li{
     float: left;
 }
+
 .nav-a {
     font-size: 13px;
     text-decoration: none;
@@ -29,6 +33,7 @@
     padding: 3px 10px;
     background: white;
 }
+
 .login-div {
     position: absolute;
     right: 12px;
@@ -37,11 +42,13 @@
     background: white;
     border-radius: 5px;
 }
+
 .login-div span {
     font-size: 13px;
     color: #404040;
     margin: 0 0 0 10px;
 }
+
 .login-div input {
     font-size: 13px;
     color: #404040;
@@ -50,9 +57,11 @@
     width: 103px;
     background: #E8E8E8;
 }
+
 .dis-none {
     display: none;
 }
+
 .nav-a img {
     display: inline-block;
     position: relative;
@@ -61,12 +70,14 @@
     margin: 0 5px 0 0;
     bottom: -2px;
 }
+
 .blog-logo {
     position: absolute;
     left: 20px;
     width: 87px;
     height: 87px;
 }
+
 .logo-text {
     position: absolute;
     color: #505050;

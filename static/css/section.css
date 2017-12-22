@@ -2,11 +2,13 @@ article {
     position: relative;
     margin: 0 0 80px;
 }
+
 article img {
     position: relative;
     top: 1px;
     margin: 0 3px 0 0;
 }
+
 article a, article span {
     position: relative;
     text-decoration: none;
@@ -16,43 +18,53 @@ article a, article span {
     color: #666666;
     display: inline-block;
 }
+
 .art-head img {
     width: 12px;
     height: 12px;
 }
+
 .art-title {
     font-size: 26px;
 }
+
 .post-body {
     font-size: 15px;
     margin: 45px 0;
 }
+
 .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6, .post-body p, .post-body span, .post-body ul, .post-body ol, .post-body em{
     line-height: 2;
     color: #333333;
 }
+
 .art-foot a{
     font-size: 15px;
 }
+
 .art-foot span {
     font-size: 15px;
     margin: 0;
 }
+
 .art-foot img {
     width: 15px;
     height: 15px;
     margin: 0 5px 0 0;
     top: 2px;
 }
+
 .art-line {
     width: 400px;
     margin: 60px auto 0;
     border-top: 1px solid #D0D0D0;
 }
+
 .art-head {
     position: relative;
     background: inherit;
 }
+
 .text-low {
     color: #A0A0A0;
     border: none;

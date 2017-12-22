@@ -5,16 +5,19 @@
     list-style: none;
     width: 87%;
 }
+
 .list-li {
     position: relative;
     padding: 10px;
     border-bottom: 1px solid #E8E8E8;
 }
+
 .list-head a {
     font-size: 16px;
     color: white;
     text-decoration: none;
 }
+
 .list-head img {
     position: relative;
     width: 16px;
@@ -22,30 +25,36 @@
     top: 4px;
     margin: 0 3px 0 0;
 }
+
 .list-foot {
     margin: 10px 0 0 0;
 }
+
 .list-foot span, .list-foot a {
     font-size: 9px;
     color: white;
     text-decoration: none;
 }
+
 .list-foot img {
     position: relative;
     width: 13px;
     height: 13px;
     top: 2px;
 }
+
 .list-tag {
     position: relative;
     float: right;
 }
+
 .am-div {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     left: 13px;
 }
+
 .am-cont {
     width: 87%;
     font-size: 18px;
