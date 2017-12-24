@@ -1,3 +1,4 @@
+// 渲染评论模板
 const categoryNum = (blogs) => {
     let r = []
     for (let i = 0; i < blogs.length; i++) {
@@ -25,7 +26,6 @@ const templateTitle = (blogs) => {
 const insertTitle = (blogs) => {
     let div = e('section')
     let t = templateTitle(blogs)
-    // div.insertAdjacentHTML('afterbegin', t)
     appendHTML(div, t)
 }
 
@@ -95,14 +95,12 @@ const insertBlog = (blogs) => {
     }
 }
 
-const blogAll = function() {
-    let request = {
+var blogAll = function() {
+    var request = {
         method: 'GET',
         url: '/api/blog/all',
         contentType: 'application/json',
         callback: function(response) {
-            // 不考虑错误情况（断网、服务器返回错误等等）
-            // console.log('响应', response)
             var blogs = JSON.parse(response)
             insertTitle(blogs)
             insertCates(blogs)

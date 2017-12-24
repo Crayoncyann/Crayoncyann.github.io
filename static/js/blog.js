@@ -1,22 +1,22 @@
-var templateBlog = function(blog) {
-    var id = blog.id
-    var title = blog.title
+const templateBlog = function(blog) {
+    let id = blog.id
+    let title = blog.title
     let category = blog.category
     let cate = ''
     for (var i = 0; i < category.length; i++) {
         let c = category[i]
         cate += '#' + c + ' '
     }
-    var content = blog.content
-    var d = new Date(blog.created_time * 1000)
-    var time = d.toLocaleString()
+    let content = blog.content
+    let d = new Date(blog.created_time * 1000)
+    let time = d.toLocaleString()
     timeArray = time.split('/')
     timeArray[2] = timeArray[2].replace('上午', 'am ')
     timeArray[2] = timeArray[2].replace('下午', 'pm ')
     timeArray[2] = timeArray[2].slice(0, -3)
     timeArray[2] = timeArray[2].slice(0, 2) + timeArray[2].slice(5) + timeArray[2].slice(2, 5)
     time = timeArray[0] + '-' + timeArray[1] + '-' + timeArray[2]
-    var t = `
+    let t = `
         <article>
             <header class="art-head">
                 <a class="art-title">
@@ -44,14 +44,14 @@ var templateBlog = function(blog) {
     return t
 }
 
-var insertBlogAll = function(blogs) {
-    var html = ''
+const insertBlogAll = function(blogs) {
+    let html = ''
     for (var i = 0; i < blogs.length; i++) {
-        var b = blogs[i]
-        var t = templateBlog(b)
+        let b = blogs[i]
+        let t = templateBlog(b)
         html += t
     }
-    var div = e('section')
+    let div = e('section')
     appendHTML(div, html)
 }
 
@@ -61,8 +61,6 @@ var blogAll = function() {
         url: '/api/blog/all',
         contentType: 'application/json',
         callback: function(response) {
-            // 不考虑错误情况（断网、服务器返回错误等等）
-            // console.log('响应', response)
             var blogs = JSON.parse(response)
             window.blogs = blogs
             insertBlogAll(blogs)

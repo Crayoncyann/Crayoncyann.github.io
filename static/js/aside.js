@@ -35,7 +35,7 @@ const insertPhotosNum = function(photos) {
     appendHTML(div, html)
 }
 
-const asideBlog = function() {
+var asideBlog = function() {
     var request = {
         method: 'GET',
         url: '/api/blog/all',
@@ -50,7 +50,7 @@ const asideBlog = function() {
     ajax(request)
 }
 
-const asidePhoto = () => {
+var asidePhoto = () => {
     var request = {
         method: 'GET',
         url: '/api/photo/all',
@@ -115,18 +115,18 @@ const templateBlogList = (blog) => {
 }
 
 const insertBlogList = (blogs) => {
-    var div = e('.list-div')
+    let div = e('.list-div')
     div = div.querySelector('ul')
-    var html = ''
+    let html = ''
     for (var i = 0; i < blogs.length; i++) {
-        var b = blogs[i]
-        var t = templateBlogList(b)
+        let b = blogs[i]
+        let t = templateBlogList(b)
         html += t
     }
     appendHTML(div, html)
 }
 
-const blogList = function() {
+var blogList = function() {
     var request = {
         method: 'GET',
         url: '/api/blog/all',

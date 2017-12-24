@@ -38,3 +38,8 @@ article a:hover {
     background: white;
     color: #404040;
 }
+
+.slide-hide:hover {
+    box-shadow: 0 0 3px 2px #ff6347;
+    color: #ff6347;
+}

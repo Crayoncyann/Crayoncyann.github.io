@@ -16,7 +16,7 @@
     @ 现评论采用 来必力
 */
 
-// var commentNew = function(form, callback) {
+// const commentNew = function(form, callback) {
 //     var data = JSON.stringify(form)
 //     var request = {
 //         method: 'POST',
@@ -32,13 +32,13 @@
 //     ajax(request)
 // }
 
-// var actionCommentAdd = (event) => {
-//     var self = event.target
-//     var form = self.closest('.new-comment')
-//     var blogId = form.querySelector('.comment-blog-id').value
-//     var author = form.querySelector('.comment-author').value
-//     var content = form.querySelector('.comment-content').value
-//     var d = {
+// const actionCommentAdd = (event) => {
+//     let self = event.target
+//     let form = self.closest('.new-comment')
+//     let blogId = form.querySelector('.comment-blog-id').value
+//     let author = form.querySelector('.comment-author').value
+//     let content = form.querySelector('.comment-content').value
+//     let d = {
 //         blog_id: blogId,
 //         author: author,
 //         content: content,
@@ -53,7 +53,7 @@
 
 // document.body.addEventListener('click', function(event) {
 //     log('click comment new')
-//     var self = event.target
+//     let self = event.target
 //     if (self.classList.contains('comment-add')) {
 //         actionCommentAdd(event)
 //     }

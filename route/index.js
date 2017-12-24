@@ -9,7 +9,6 @@ const sendHtml = (path, response) => {
     }
     path = 'template/' + path
     fs.readFile(path, options, (error, data) => {
-        // console.log(`读取的html文件 ${path} 内容是`, data)
         response.send(data)
     })
 }
@@ -53,7 +52,6 @@ const article = {
         }
         path = 'template/' + path
         fs.readFile(path, options, (error, data) => {
-            // console.log(`读取的html文件 ${path} 内容是`, data)
             data = data.replace('{{blog_id}}', blog_id)
             response.send(data)
         })

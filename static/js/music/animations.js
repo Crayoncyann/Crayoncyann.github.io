@@ -5,7 +5,7 @@ var animation = (e) => {
         // 先移除display, 再异步处理动画
         setTimeout(() => {
             e.classList.remove('opacity-active')
-        }, 0)
+        }, 20)
     } else {
         e.classList.add('opacity-active')
         bindEvent(e, 'transitionend', () => {

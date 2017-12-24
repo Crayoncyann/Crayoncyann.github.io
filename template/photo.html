@@ -122,6 +122,24 @@
                 </div>
             </div>
         </aside>
+        <!-- 相片播放器 -->
+        <div class="photo-slide opacity-active display-active">
+            <div class="slide-info">
+                <span id="slide-now">-1</span>
+                <span> / </span>
+                <span id="slide-length">-1</span>
+            </div>
+            <div class="slide-buttons">
+                <img class="slide-button" src="/icon/photo/slide.png" alt="播放相册" title="播放相册" id="slide-loop" data-active="0">
+                <img class="slide-button" src="/icon/photo/exit.png" alt="退出" title="退出" id="slide-exit">
+            </div>
+            <button class="slide-hide slide-left" id="slide-prv" data-offset="-1">
+                &lt;
+            </button>
+            <button class="slide-hide slide-right" id="slide-nxt" data-offset="1">
+                &gt;
+            </button>
+        </div>
         <!-- 音乐播放器 -->
         <div class="audio-div">
             <div class="audio-state">

@@ -54,19 +54,18 @@ const templateArticle = (blog) => {
 }
 
 const insertArticle = (blog) => {
-    var section = e('section')
+    let section = e('section')
     let t = templateArticle(blog)
     section.insertAdjacentHTML('afterbegin', t)
 }
 
-const blogArticle = (id) => {
+var blogArticle = (id) => {
     var request = {
         method: 'GET',
         url: '/api/blog/' + id,
         contentType: 'application/json',
         callback: function(response) {
             var b = JSON.parse(response)
-            // 渲染页面
             insertArticle(b)
             insertFoot()
         }
@@ -75,8 +74,8 @@ const blogArticle = (id) => {
 }
 
 const templatePrvNxt = (id) => {
-    var prv = Number(id) - 1
-    var nxt = Number(id) + 1
+    let prv = Number(id) - 1
+    let nxt = Number(id) + 1
     var t = `
         <a class="art-prv" href="${prv}">
             <img src="/icon/blog/prv.png" alt="">
@@ -91,9 +90,9 @@ const templatePrvNxt = (id) => {
 }
 
 const insertPrvNxt = (blogs) => {
-    var nav = e('.art-nav-center')
-    var id = e('body').dataset.id
-    var t = templatePrvNxt(id)
+    let nav = e('.art-nav-center')
+    let id = e('body').dataset.id
+    let t = templatePrvNxt(id)
     appendHTML(nav, t)
     if (id == 1) {
         e('.art-prv').remove()
@@ -105,7 +104,7 @@ const insertPrvNxt = (blogs) => {
     }
 }
 
-const blogPrvNxt = function() {
+var blogPrvNxt = function() {
     var request = {
         method: 'GET',
         url: '/api/blog/all',

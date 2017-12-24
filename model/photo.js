@@ -18,7 +18,7 @@ const finder = (path) => {
     return result
 }
 
-const db = () => {
+var db = () => {
     let r = []
     let photos = finder('./static/photo/')
     for (var i = 0; i < photos.length; i++) {
@@ -33,10 +33,9 @@ const db = () => {
         }
         r.push(photo)
     }
-    // console.log(r)
     return r
 }
 
-let filePhoto = db()
+var filePhoto = db()
 
 module.exports = filePhoto

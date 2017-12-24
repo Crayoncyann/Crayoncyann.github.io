@@ -34,8 +34,8 @@ var bindEventStatic = () => {
     addCate()
 }
 
-var templateCate = function(cate) {
-    var t = `
+const templateCate = function(cate) {
+    let t = `
         <span class="pub-cate">
             <p class="pub-cate-p" data-index="0">${cate}</p>
         </span>
@@ -43,7 +43,7 @@ var templateCate = function(cate) {
     return t
 }
 
-var categorys = (blogs) => {
+const categorys = (blogs) => {
     var r = []
     for (var i = 0; i < blogs.length; i++) {
         var cate = blogs[i].category
@@ -54,15 +54,15 @@ var categorys = (blogs) => {
     return r
 }
 
-var insertCates = function(blogs) {
-    var cates = categorys(blogs)
-    var html = ''
+const insertCates = function(blogs) {
+    let cates = categorys(blogs)
+    let html = ''
     for (var i = 0; i < cates.length; i++) {
         var cate = cates[i]
         var t = templateCate(cate)
         html += t
     }
-    var div = e('.cate-div')
+    let div = e('.cate-div')
     appendHTML(div, html)
 }
 
@@ -102,8 +102,6 @@ var catesAll = function() {
         url: '/api/blog/all',
         contentType: 'application/json',
         callback: function(response) {
-            // 不考虑错误情况（断网、服务器返回错误等等）
-            // console.log('响应', response)
             var blogs = JSON.parse(response)
             window.blogs = blogs
             insertCates(blogs)
@@ -122,8 +120,6 @@ var blogNew = function(form) {
         contentType: 'application/json',
         data: data,
         callback: function(response) {
-            // 不考虑错误情况（断网、服务器返回错误等等）
-            console.log('响应', response)
             var res = JSON.parse(response)
             var id = res.id
             setTimeout(() => {
