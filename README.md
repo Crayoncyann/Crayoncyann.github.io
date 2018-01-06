@@ -5,7 +5,7 @@
 
 示例图如下 （12.20 更新）
 
-![](Crayoncyann.github.io/示例图/博客示例图.gif)
+![](https://github.com/Crayoncyann/Crayoncyann.github.io/blob/master/screenshots/blog.gif)
 
 
 ## 基本功能
@@ -75,7 +75,7 @@
 
 ## update
 
-![](Crayoncyann.github.io/示例图/网页音乐播放器插件.gif)
+![](https://github.com/Crayoncyann/Crayoncyann.github.io/blob/master/screenshots/music.gif)
 
 1. 添加页面底部的音乐播放器, 参照[网易云音乐](http://music.163.com/)
 - 音乐的播放控制（开始、暂停、切歌）
@@ -91,7 +91,7 @@
 
 ## update
 
-![](Crayoncyann.github.io/示例图/顶部回滚.gif)
+![](https://github.com/Crayoncyann/Crayoncyann.github.io/blob/master/screenshots/top.gif)
 
 1. 引入 **jQuery**, 添加顶部回滚功能, 参考[jQuery 效果 - animate() 方法](http://www.w3school.com.cn/jquery/effect_animate.asp)
 2. 修改播放器弹出按钮动画
@@ -99,7 +99,7 @@
 
 ## update
 
-![](Crayoncyann.github.io/示例图/相册插件.gif)
+![](https://github.com/Crayoncyann/Crayoncyann.github.io/blob/master/screenshots/photo.gif)
 
 1. 添加了相册功能
 - 鼠标移动提示
